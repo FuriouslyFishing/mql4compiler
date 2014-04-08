@@ -6,7 +6,7 @@ import re
 import sys
 
 PLATFORM = sublime.platform()
-METALANG = 'metalang.exe'
+METALANG = 'mql.exe'
 EXTENSION = '.mq4'
 WINE = 'wine'
 
@@ -52,7 +52,7 @@ class Mql4CompilerCommand(sublime_plugin.TextCommand):
 
         if not os.path.exists(METALANG_PATH):
             print (METALANG_PATH) # Debug
-            print ("Mqlcompiler | error: metalang.exe not found")
+            print ("Mqlcompiler | error: mql.exe not found")
             iserror = True
 
         if PLATFORM != 'windows':
